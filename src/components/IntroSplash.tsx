@@ -1,7 +1,7 @@
 import { useEffect, useId, useMemo } from "react";
 import { motion } from "framer-motion";
 
-const NAME = "ARQSTUDIO";
+const NAME = "ArqStudio";
 /** Duración total del intro (ms) — mantener sincronizado con App */
 export const INTRO_DURATION = 2500;
 

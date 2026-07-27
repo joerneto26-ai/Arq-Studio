@@ -77,10 +77,9 @@ export const valueProps = [
     eyebrow: "Dream outcome",
     title: "Nos encargamos de la idea a la obra",
     desc: "Diseño, proyecto ejecutivo, licencia y construcción con un solo equipo. Sin contratistas que se echan la bolita ni información que se pierde entre tres oficinas.",
-    image:
-      "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1000&h=800",
-    imageAlt: "Arquitecto y supervisor revisando planos dentro de una obra en proceso",
-    cta: "Quiero que se encarguen de todo",
+    image: "/images/value-equipo.webp",
+    imageAlt: "Manos de arquitecto revisando planos ejecutivos en obra",
+    cta: "Cotizar mi proyecto",
   },
   {
     eyebrow: "Dream outcome",
@@ -260,8 +259,7 @@ export const services = [
   },
 ];
 
-export const benefitsImage =
-  "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1000&h=1100";
+export const benefitsImage = "/images/benefits-obra.webp";
 
 export const benefits = [
   "Nos encargamos de todo: diseño, licencia y obra con un solo equipo.",

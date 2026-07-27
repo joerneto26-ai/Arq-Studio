@@ -5,9 +5,6 @@ import { Reveal } from "./ui/Reveal";
 import { ArrowRight, Whatsapp } from "./icons";
 import { brand, waLink } from "@/lib/content";
 
-const HERO_IMG =
-  "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=2000&h=1300";
-
 const WA_MSG =
   "Hola ARQSTUDIO, me gustaría una cotización sin compromiso para mi proyecto en Mazatlán.";
 
@@ -27,13 +24,19 @@ export function Hero({ delayBase = 0 }: { delayBase?: number }) {
       className="relative isolate min-h-[100svh] overflow-hidden"
     >
       <motion.div style={{ y, scale }} className="absolute inset-0 -z-10">
-        <img
-          src={HERO_IMG}
-          alt="Arquitecto y supervisor revisando planos dentro de una obra en proceso en Mazatlán"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/videos/hero-poster.webp"
+          aria-label="Obra en proceso: casa moderna en construcción en Mazatlán"
           className="h-full w-full object-cover"
           style={{ objectPosition: "65% center" }}
-          fetchPriority="high"
-        />
+        >
+          <source src="/videos/hero-mobile.mp4" media="(max-width: 639px)" />
+          <source src="/videos/hero-desktop.mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-forest-950/75 via-forest-950/55 to-forest-950/95" />
         <div className="absolute inset-0 bg-gradient-to-r from-forest-950/75 via-forest-950/10 to-transparent" />
       </motion.div>
@@ -93,11 +96,6 @@ export function Hero({ delayBase = 0 }: { delayBase?: number }) {
 
         <Reveal delay={delayBase + 0.28}>
           <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 sm:mt-10 sm:gap-x-6 sm:gap-y-3">
-            <span className="text-xs text-bone-200/80 sm:text-sm">
-              <span className="font-semibold text-bone-50">3 proyectos</span>{" "}
-              ejecutivos entregados 2025–26
-            </span>
-            <span className="hidden h-8 w-px bg-bone-50/15 sm:block" />
             <span className="text-xs text-bone-200/80 sm:text-sm">
               Trato directo · Sin intermediarios
             </span>
