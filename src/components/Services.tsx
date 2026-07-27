@@ -13,11 +13,6 @@ function ServiceCard({
 }) {
   return (
     <div className="relative flex h-full flex-col rounded-3xl border border-bone-200/80 bg-white/60 p-8 text-ink-900 transition-all duration-300 hover:border-sand-500/30 hover:shadow-card">
-      {s.badge && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-sand-500/30 bg-bone-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-sand-600">
-          {s.badge}
-        </span>
-      )}
       <h3 className="font-display text-2xl text-ink-900">{s.name}</h3>
       <p className="mt-2 text-sm text-stone-600">{s.tagline}</p>
 

@@ -1,7 +1,7 @@
 import { SectionHeading } from "./ui/SectionHeading";
 import { Reveal } from "./ui/Reveal";
 import { Button } from "./ui/Button";
-import { Check, Whatsapp } from "./icons";
+import { ArrowRight, Check, Whatsapp } from "./icons";
 import { compromisos, waLink } from "@/lib/content";
 
 export function Testimonials() {
@@ -19,9 +19,9 @@ export function Testimonials() {
           lead="Somos un estudio joven y eso nos obliga a ser más claros que nadie: cada compromiso va por escrito desde el día uno."
         />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2">
+        <div className="no-scrollbar -mx-5 mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-1 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0">
           {compromisos.map((c) => (
-            <Reveal key={c.title}>
+            <Reveal key={c.title} className="min-w-[82%] snap-center sm:min-w-0">
               <div className="group relative h-full overflow-hidden rounded-2xl glass-dark p-7 transition-colors duration-300 hover:border-brass-400/30">
                 <span className="grid h-10 w-10 place-items-center rounded-xl border border-brass-500/30 bg-brass-500/10 text-brass-300">
                   <Check className="h-5 w-5" />
@@ -36,6 +36,11 @@ export function Testimonials() {
             </Reveal>
           ))}
         </div>
+
+        <p className="mt-5 flex items-center justify-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-bone-200/60 sm:hidden">
+          Desliza
+          <ArrowRight className="h-3.5 w-3.5 animate-nudge-right" />
+        </p>
 
         <Reveal delay={0.15}>
           <div className="mt-12 flex justify-center">

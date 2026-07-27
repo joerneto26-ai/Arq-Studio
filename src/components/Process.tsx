@@ -27,12 +27,12 @@ export function Process() {
           <div className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-sand-300/40 to-transparent lg:block" />
           <StaggerGroup
             stagger={0.1}
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+            className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-1 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4"
           >
             {processSteps.map((s) => {
               const Icon = featureIcons[s.icon as keyof typeof featureIcons];
               return (
-                <StaggerItem key={s.n}>
+                <StaggerItem key={s.n} className="min-w-[80%] snap-center sm:min-w-0">
                   <div className="group relative h-full overflow-hidden rounded-2xl border border-bone-200/80 bg-bone-50 p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-sand-500/40 hover:shadow-card">
                     <span className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-sand-300 to-sand-500 transition-transform duration-500 group-hover:scale-x-100" />
                     <span className="relative z-10 inline-grid h-14 w-14 place-items-center rounded-full border border-sand-500/30 bg-bone-50 font-display text-lg font-medium text-sand-600 shadow-soft">
@@ -52,6 +52,11 @@ export function Process() {
               );
             })}
           </StaggerGroup>
+
+          <p className="mt-5 flex items-center justify-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-stone-500 sm:hidden">
+            Desliza
+            <ArrowRight className="h-3.5 w-3.5 animate-nudge-right" />
+          </p>
         </div>
 
         <div className="mt-12 flex flex-col items-center">
