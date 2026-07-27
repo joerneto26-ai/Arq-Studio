@@ -64,9 +64,8 @@ export function Hero({ delayBase = 0 }: { delayBase?: number }) {
 
         <Reveal delay={delayBase + 0.14}>
           <p className="mt-5 max-w-md text-[0.95rem] leading-snug text-bone-200/90 sm:mt-6 sm:max-w-xl sm:text-lg sm:leading-relaxed">
-            Deje de coordinar arquitecto, gestor y constructor por separado.
-            En ARQSTUDIO nos encargamos del diseño, el proyecto ejecutivo, la
-            licencia y la supervisión de obra. Usted solo aprueba y avanza.
+            Nos encargamos del diseño, el proyecto ejecutivo, la licencia y la
+            obra. Usted solo aprueba y avanza.
           </p>
         </Reveal>
 
