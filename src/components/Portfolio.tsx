@@ -93,7 +93,7 @@ export function Portfolio() {
                   rel="noopener noreferrer"
                   className={cn(
                     "group relative block h-full w-full overflow-hidden rounded-2xl bg-forest-900",
-                    big && "sm:col-span-2 sm:row-span-2"
+                    big && "row-span-2 sm:col-span-2"
                   )}
                 >
                   <img
@@ -102,7 +102,7 @@ export function Portfolio() {
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-forest-950/90 via-forest-950/20 to-transparent transition-all duration-500 group-hover:from-forest-950/95" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-forest-950/95 via-forest-950/40 to-transparent transition-all duration-500 group-hover:from-forest-950/95" />
                   <span className="absolute right-4 top-4 text-xs font-medium tracking-widest text-bone-100/70">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -113,7 +113,7 @@ export function Portfolio() {
                     <h3
                       className={cn(
                         "mt-3 font-display text-bone-50",
-                        big ? "text-2xl sm:text-3xl" : "text-xl"
+                        big ? "text-xl sm:text-3xl" : "text-xl"
                       )}
                     >
                       {p.title}

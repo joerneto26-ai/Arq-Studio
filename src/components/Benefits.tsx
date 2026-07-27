@@ -65,7 +65,7 @@ export function Benefits() {
           <div className="relative overflow-hidden rounded-3xl shadow-card">
             <img
               src={benefitsImage}
-              alt="Equipo revisando planos arquitectónicos y proyecto ejecutivo"
+              alt="Equipo de ArqStudio con cascos recorriendo una obra en construcción en Mazatlán"
               loading="lazy"
               className="aspect-square w-full object-cover sm:aspect-[5/6]"
             />
