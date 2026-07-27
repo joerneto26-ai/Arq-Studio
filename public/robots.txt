@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arqstudio.mx/sitemap.xml
