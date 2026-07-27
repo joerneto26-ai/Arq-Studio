@@ -49,14 +49,14 @@ export function PainPoint() {
                 <div className="mt-6">
                   <Button
                     href={waLink(
-                      "Hola ARQSTUDIO, me identifiqué con lo que leí. Quiero un solo responsable para mi proyecto."
+                      "Hola ARQSTUDIO, me identifiqué con lo que leí. Quiero que se encarguen de todo en mi proyecto."
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
                     variant="sand"
                     size="lg"
                   >
-                    Quiero un solo responsable
+                    Quiero que se encarguen de todo
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
                   <p className="mt-3 flex items-center gap-2 text-xs text-stone-600">

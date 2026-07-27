@@ -1,5 +1,7 @@
-import { MotionConfig } from "framer-motion";
+import { useState } from "react";
+import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { Navbar } from "./components/Navbar";
+import { IntroSplash } from "./components/IntroSplash";
 import { Hero } from "./components/Hero";
 import { TrustBar } from "./components/TrustBar";
 import { PainPoint } from "./components/PainPoint";
@@ -15,7 +17,25 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { WhatsAppFab } from "./components/WhatsAppFab";
 
+function shouldSkipIntro() {
+  if (typeof window === "undefined") return true;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return true;
+  return sessionStorage.getItem("arq-intro") === "1";
+}
+
 export default function App() {
+  const [skipped] = useState(shouldSkipIntro);
+  const [introDone, setIntroDone] = useState(skipped);
+
+  const finishIntro = () => {
+    try {
+      sessionStorage.setItem("arq-intro", "1");
+    } catch {
+      /* almacenamiento no disponible: continuar igual */
+    }
+    setIntroDone(true);
+  };
+
   return (
     <MotionConfig reducedMotion="user">
       <a
@@ -25,10 +45,20 @@ export default function App() {
         Saltar al contenido
       </a>
 
-      <Navbar />
+      <AnimatePresence>
+        {!introDone && <IntroSplash onDone={finishIntro} />}
+      </AnimatePresence>
+
+      <motion.div
+        initial={{ opacity: skipped ? 1 : 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: skipped ? 0 : 2.3, duration: 0.45 }}
+      >
+        <Navbar />
+      </motion.div>
 
       <main id="contenido">
-        <Hero />
+        <Hero delayBase={skipped ? 0 : 2.55} />
         <TrustBar />
         <PainPoint />
         <ValueProps />

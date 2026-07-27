@@ -32,18 +32,27 @@ export const nav = [
   { label: "Contacto", href: "#contacto" },
 ];
 
-export const stats = [
-  { value: 3, suffix: "", label: "Proyectos ejecutivos 2025–26" },
-  { value: 3, suffix: "", label: "Modalidades de precio a elegir" },
-  { value: 100, suffix: "%", label: "Documentación para licencia incluida" },
-];
-
-export const badges = [
-  "Trato directo con el arquitecto",
-  "AutoCAD · SketchUp · V-Ray",
-  "Planos para licencias y permisos",
-  "Supervisión de obra incluida",
-  "Contrato y alcance por escrito",
+export const certificaciones = [
+  {
+    icon: "layers",
+    title: "AutoCAD · SketchUp · V-Ray",
+    desc: "Del plano 2D al volumen 3D y renders fotorrealistas.",
+  },
+  {
+    icon: "file",
+    title: "Planos para licencias y permisos",
+    desc: "Documentación completa para trámite municipal.",
+  },
+  {
+    icon: "helmet",
+    title: "Supervisión de obra incluida",
+    desc: "Visitas de supervisión y reportes de avance.",
+  },
+  {
+    icon: "shield",
+    title: "Contrato y alcance por escrito",
+    desc: "Sin sorpresas ni sobrecostos ocultos.",
+  },
 ];
 
 /* ---- Pain point: problema → agitar → solución ---- */
@@ -59,19 +68,19 @@ export const painPoint = {
   agitate:
     "Mientras tanto su terreno sigue sin producir, el local sin abrir y la ampliación en pausa. Cada semana parada cuesta: rentas que corren, materiales que suben y oportunidades que pasan.",
   solution:
-    "En ARQSTUDIO una sola persona responde por todo: diseño arquitectónico, proyecto ejecutivo, licencia de construcción y obra supervisada. Usted habla con quien diseña, tramita y construye.",
+    "En ARQSTUDIO nos encargamos de todo: diseño arquitectónico, proyecto ejecutivo, licencia de construcción y obra supervisada. Usted habla con nosotros: diseñamos, tramitamos y construimos.",
 };
 
 /* ---- Value props (alternadas imagen izq/der) ---- */
 export const valueProps = [
   {
     eyebrow: "Dream outcome",
-    title: "Un solo responsable de la idea a la obra",
-    desc: "Diseño, proyecto ejecutivo, licencia y construcción con el mismo arquitecto. Sin contratistas que se echan la bolita ni información que se pierde entre tres oficinas.",
+    title: "Nos encargamos de la idea a la obra",
+    desc: "Diseño, proyecto ejecutivo, licencia y construcción con un solo equipo. Sin contratistas que se echan la bolita ni información que se pierde entre tres oficinas.",
     image:
       "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1000&h=800",
     imageAlt: "Arquitecto y supervisor revisando planos dentro de una obra en proceso",
-    cta: "Quiero un solo responsable",
+    cta: "Quiero que se encarguen de todo",
   },
   {
     eyebrow: "Dream outcome",
@@ -95,8 +104,8 @@ export const valueProps = [
 export const features = [
   {
     icon: "gem",
-    title: "Trato directo con el arquitecto",
-    desc: "Habla con quien diseña, tramita y supervisa. Sin vendedores ni intermediarios.",
+    title: "Trato directo, sin intermediarios",
+    desc: "Habla con quien diseña, tramita y supervisa. Sin vendedores de por medio.",
   },
   {
     icon: "layers",
@@ -256,7 +265,7 @@ export const benefitsImage =
   "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1000&h=1100";
 
 export const benefits = [
-  "Un solo responsable: diseño, licencia y obra con el mismo arquitecto.",
+  "Nos encargamos de todo: diseño, licencia y obra con un solo equipo.",
   "Documentación completa para permisos incluida desde el inicio.",
   "Supervisión de obra y reportes de avance periódicos.",
   "Tres modalidades de precio: unitarios, alzado o administración.",

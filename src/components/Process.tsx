@@ -65,7 +65,7 @@ export function Process() {
               <strong className="font-semibold text-ink-900">
                 Trato directo:
               </strong>{" "}
-              habla con el arquitecto que diseña, tramita y supervisa
+              habla con quien diseña, tramita y supervisa
             </span>
           </div>
         </div>

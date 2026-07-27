@@ -1,58 +1,37 @@
-import { cn } from "@/utils/cn";
-import { Counter } from "./ui/Counter";
 import { Reveal, StaggerGroup, StaggerItem } from "./ui/Reveal";
-import { Check } from "./icons";
-import { badges, stats } from "@/lib/content";
+import { featureIcons } from "./icons";
+import { certificaciones } from "@/lib/content";
 
 export function TrustBar() {
   return (
-    <section className="relative border-y border-bone-200/70 bg-bone-50">
+    <section className="relative border-b border-bone-200/70 bg-bone-50">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16">
         <Reveal>
-          <p className="text-center font-display text-xl font-light text-ink-800 sm:text-2xl">
-            La confianza se construye espacio tras espacio.
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-stone-500">
+            Acreditaciones y forma de trabajo
           </p>
         </Reveal>
 
-        <StaggerGroup className="mt-10 grid grid-cols-2 gap-y-8 sm:gap-6 lg:grid-cols-4">
-          {stats.map((s, i) => (
-            <StaggerItem
-              key={i}
-              className={cn(
-                "px-2 text-center sm:px-6",
-                i !== 0 && "sm:border-l sm:border-bone-200/70"
-              )}
-            >
-              <div className="font-display text-4xl font-medium tracking-tight text-ink-900 sm:text-5xl">
-                <Counter
-                  value={s.value}
-                  decimals={s.decimals ?? 0}
-                  prefix={s.prefix ?? ""}
-                  suffix={s.suffix ?? ""}
-                />
-              </div>
-              <p className="mx-auto mt-2 max-w-[12rem] text-sm leading-snug text-stone-600">
-                {s.label}
-              </p>
-            </StaggerItem>
-          ))}
+        <StaggerGroup className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5">
+          {certificaciones.map((c) => {
+            const Icon = featureIcons[c.icon as keyof typeof featureIcons];
+            return (
+              <StaggerItem key={c.title}>
+                <div className="group flex h-full flex-col items-center rounded-2xl border border-bone-200/80 bg-white px-6 py-7 text-center shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-brass-400/40 hover:shadow-card">
+                  <span className="grid h-14 w-14 place-items-center rounded-full bg-brass-500/12 text-brass-600 transition-colors duration-300 group-hover:bg-brass-500/20">
+                    <Icon className="h-7 w-7" />
+                  </span>
+                  <h3 className="mt-4 text-[0.95rem] font-semibold leading-snug text-ink-900">
+                    {c.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-snug text-stone-600">
+                    {c.desc}
+                  </p>
+                </div>
+              </StaggerItem>
+            );
+          })}
         </StaggerGroup>
-
-        <Reveal delay={0.1}>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-bone-200/70 pt-8">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
-              Acreditaciones
-            </span>
-            {badges.map((b) => (
-              <span
-                key={b}
-                className="inline-flex items-center gap-1.5 text-sm text-ink-700"
-              >
-                <Check className="h-4 w-4 text-brass-500" /> {b}
-              </span>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );

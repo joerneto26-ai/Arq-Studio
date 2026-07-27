@@ -48,7 +48,7 @@ export function Testimonials() {
               variant="sand"
               size="lg"
             >
-              <Whatsapp className="h-5 w-5" /> Hablar con el arquitecto
+              <Whatsapp className="h-5 w-5" /> Hablar con nosotros
             </Button>
           </div>
         </Reveal>
