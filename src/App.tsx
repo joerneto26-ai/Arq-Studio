@@ -19,22 +19,14 @@ import { WhatsAppFab } from "./components/WhatsAppFab";
 
 function shouldSkipIntro() {
   if (typeof window === "undefined") return true;
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return true;
-  return sessionStorage.getItem("arq-intro") === "1";
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
 export default function App() {
   const [skipped] = useState(shouldSkipIntro);
   const [introDone, setIntroDone] = useState(skipped);
 
-  const finishIntro = () => {
-    try {
-      sessionStorage.setItem("arq-intro", "1");
-    } catch {
-      /* almacenamiento no disponible: continuar igual */
-    }
-    setIntroDone(true);
-  };
+  const finishIntro = () => setIntroDone(true);
 
   return (
     <MotionConfig reducedMotion="user">

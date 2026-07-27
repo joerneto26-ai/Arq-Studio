@@ -235,7 +235,6 @@ export const services = [
     tagline: "Su licencia de construcción sin filas ni idas y vueltas.",
     price: "Cotización a medida",
     priceNote: "según tipo de trámite",
-    badge: "Más solicitado",
     includes: [
       "Trámite completo de licencia de construcción",
       "Alineamiento y uso de suelo",
